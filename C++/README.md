@@ -20,6 +20,12 @@
 
 10. coutPrecision.cpp 控制最终输出double精度的两种方法
 
+11. decimaConversion.cpp 任意进制转换器
+
+12. stringJoin.cpp 将输入按照二进制进行倒序拼接
+
+13. stringSplit.cpp 将字符串按照特定的字符进行分割，保存需要的字符串
+
 
 
 
