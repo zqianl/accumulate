@@ -250,7 +250,7 @@ def Requiem(tw1, tw2, dur):
 def center_window(root):
 	screenwidth = root.winfo_screenwidth()
 	screenheight = root.winfo_screenheight()
-	size = '%dx%d+%d+%d' % (880, 756, screenheight*0.4, screenheight *0.015 )
+	size = '%dx%d+%d+%d' % (880, 756, screenwidth*0.2, screenheight *0.015 )
 	root.geometry(size)
 
 def drawPicFun():
@@ -349,7 +349,7 @@ def main():
 	global var_option
 	var_option=StringVar(root)
 	var_option.set("model1")
-	option=OptionMenu(root,var_option,"model1","model2","model3","model4").grid(row=0,column=0,padx=45,pady=10,sticky=W)
+	OptionMenu(root,var_option,"model1","model2","model3","model4").grid(row=0,column=0,padx=45,pady=10,sticky=W)
 
 	global var_checkbutton
 	var_checkbutton = IntVar()
@@ -372,9 +372,7 @@ def main():
 
 	# 在Tk的GUI上放置一个画布，并用.grid()来调整布局
 	global drawPic
-	screenwidth = root.winfo_screenwidth()
-	screenheight = root.winfo_screenheight()
-	drawPic = Figure(figsize=(np.ceil(screenwidth/150), np.ceil(screenheight/180)))
+	drawPic = Figure(figsize=(10.0, 5.0),dpi=80)
 	drawPic.canvas = FigureCanvasTkAgg(drawPic, master=root)
 	drawPic.canvas.show()
 	drawPic.canvas.get_tk_widget().grid(row=2, columnspan=4, padx=45, pady=10,sticky=S + N + E + W)

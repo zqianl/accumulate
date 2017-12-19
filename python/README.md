@@ -7,3 +7,5 @@
 3. file_corr: 文件夹及文件的相关操作
 
 4. Tkinter： GUI相关
+
+5. algorithm： 算法
