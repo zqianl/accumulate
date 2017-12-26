@@ -8,4 +8,4 @@
 
 4. Tkinter： GUI相关
 
-5. algorithm： 算法
+5. hough_tranform： 霍夫变换
