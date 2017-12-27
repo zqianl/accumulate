@@ -22,8 +22,13 @@ with open(filename_read,'r') as file_to_read:
 			final_result.append(line_result)
 		else:
 			pass
+
+num_line_result = len(final_result)
+for i in range(num_line_result):
+	final_result[i][2] = int(final_result[i][2].split(':')[0]) * 60 + float(final_result[i][2].split(':')[1])
+
 with open(filename_result, 'w') as file_to_write:
 	for i in final_result:
 		for j in i:
-			file_to_write.write(j+' ')
+			file_to_write.write(str(j)+' ')
 		file_to_write.write('\n')
