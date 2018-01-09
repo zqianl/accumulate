@@ -6,7 +6,7 @@ import os
 
 
 soc_path="living_room_traj2_loop/"
-tar_path="xiaobaobao/"
+tar_path="xiaobao/"
 if not os.path.exists(tar_path):
 	os.makedirs(tar_path)
 

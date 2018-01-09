@@ -10,6 +10,10 @@ import threading
 import os
 import re
 import tkMessageBox
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 class timer(threading.Thread):  # The timer class is derived from the class threading.Thread
 	def __init__(self, num):
@@ -90,6 +94,15 @@ def CloseWindow(window):
 	if tkMessageBox.askyesno("", "关闭窗口(Yes/No)", icon="question"):
 		window.destroy()
 
+def Run():
+	choice = var_option.get()
+	if choice == "功能1":
+		print "1"
+	elif choice == "功能2":
+		print "2"
+	else:
+		print "3"
+
 def main():
 	root = Tk()
 	root.title("定位与建图系统")
@@ -126,6 +139,12 @@ def main():
 
 	Button(canvas, text='复位', width=15, height=2, font=ft2, command=Reset).place(x = 420, y = 210, width=130, height=50)
 	Button(canvas, text='退出', width=15, height=2, font=ft2, command=lambda: CloseWindow(root)).place(x=420, y=330, width=130, height=50)
+
+	global var_option
+	var_option=StringVar(root)
+	var_option.set("功能1")
+	OptionMenu(canvas,var_option,"功能1","功能2","功能3").place(x = 400, y = 130, width=80, height=40)
+	Button(canvas, text='运行', width=15, height=2, font=ft2, command=Run).place(x=500, y=130, width=80, height=40)
 
 	canvas.create_text(500, 470,text='powerd by jixiaonan')
 	# 启动事件循环
