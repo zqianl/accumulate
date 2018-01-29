@@ -26,6 +26,8 @@
 
 13. stringSplit.cpp 将字符串按照特定的字符进行分割，保存需要的字符串
 
+14. testMysql.cpp 为MFC连接数据库以及使用的示例
+
 
 
 
